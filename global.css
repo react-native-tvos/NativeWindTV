@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ribbontransformtvos {
+    transform: rotate(45deg) translate(200px, -300px);
+}
+
+.ribbontransformandroid {
+    transform: rotate(45deg) translate(100px, -150px);
+}
+
+.ribbonstyletvos {
+    background-color: rgb(200 0 0);
+    margin: 2rem;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ribbonstyleandroid {
+    background-color: rgb(200 0 0);
+    margin: 1rem;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
