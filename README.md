@@ -2,9 +2,9 @@
 
 This is an [Expo Router](https://docs.expo.dev/router/introduction/) SDK 52 project demonstrating how Tailwind CSS styles can be used in a React Native app for TV.
 
-![Android TV screenshot](https://github.com/user-attachments/assets/35643c33-02d2-47b5-a3f7-9be08a3c0efe)
+![Android TV screenshot](https://github.com/user-attachments/assets/35643c33-02d2-47b5-a3f7-9be08a3c0efe "Android TV screenshot")
 
-![Apple TV screenshot](https://github.com/user-attachments/assets/b72c9c17-9a83-4f01-8570-84da65e816d5)
+![Apple TV screenshot](https://github.com/user-attachments/assets/b72c9c17-9a83-4f01-8570-84da65e816d5 "Apple TV screenshot")
 
 Some of the packages used:
 
