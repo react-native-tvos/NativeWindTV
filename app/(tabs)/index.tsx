@@ -14,9 +14,15 @@ const App = () => {
       <Pressable
         onPress={() => {}}
         tvParallaxProperties={{ enabled: false }}
-        className="transition focus:scale-125 active:scale-150"
+        className="transition duration-500 focus:scale-125 active:scale-150"
       >
-        <Text className="text-5xl">Transitions</Text>
+        {({ focused, pressed }) => {
+          return (
+            <Text className="text-5xl">{`Transitions button${
+              pressed ? ' pressed' : focused ? ' focused' : ''
+            }`}</Text>
+          );
+        }}
       </Pressable>
       <Text className="text-5xl animate-bounce">Animations!!!</Text>
     </View>
