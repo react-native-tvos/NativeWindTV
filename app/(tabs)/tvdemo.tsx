@@ -1,7 +1,6 @@
 import {
   Platform,
   SafeAreaView,
-  ScrollView,
   StatusBar,
   Text,
   useColorScheme,
@@ -20,30 +19,18 @@ const TVDemo: () => React.JSX.Element = () => {
 
   const backgroundStyle = 'bg-neutral-300 dark:bg-slate-900 flex-1';
 
-  const buttonStyleAndroid = `relative m-1.5 bg-blue-500 w-[800px] h-[50px] text-white p-2 font-bold overflow-hidden transition duration-200 hover:bg-blue-300 focus:bg-blue-300 active:bg-green-600`;
-  const buttonStyleTVOS = `relative m-3 bg-blue-500 w-[1600px] h-[100px] text-white p-4 font-bold overflow-hidden transition duration-200 hover:bg-blue-300 focus:bg-blue-300 active:bg-green-600`;
-  const buttonStyle =
-    Platform.OS === 'ios' ? buttonStyleTVOS : buttonStyleAndroid;
+  const buttonStyle = `relative m-3 android:m-1.5 bg-blue-500 w-[1600px] h-[100px] android:w-[800px] android:h-[50px] text-white p-4 android:p-2 font-bold overflow-hidden transition duration-200 hover:bg-blue-300 focus:bg-blue-300 active:bg-green-600`;
 
-  const buttonTextStyleTVOS = 'text-white text-5xl';
-  const buttonTextStyleAndroid = 'text-white text-xl';
-  const buttonTextStyle =
-    Platform.OS === 'ios' ? buttonTextStyleTVOS : buttonTextStyleAndroid;
+  const buttonTextStyle ='text-white text-5xl android:text-xl';
 
   const ribbonStyleTVOS = 'ribbonstyletvos ribbontransformtvos';
   const ribbonStyleAndroid = 'ribbonstyleandroid ribbontransformandroid';
   const ribbonStyle =
     Platform.OS === 'ios' ? ribbonStyleTVOS : ribbonStyleAndroid;
 
-  const ribbonTextStyleTVOS = 'text-white text-xl';
-  const ribbonTextStyleAndroid = 'text-white text-s';
-  const ribbonTextStyle =
-    Platform.OS === 'ios' ? ribbonTextStyleTVOS : ribbonTextStyleAndroid;
+  const ribbonTextStyle = 'text-white text-xl android:text-sm';
 
-  const blockTextStyleTVOS = 'text-blue-800 font-bold text-4xl p-4';
-  const blockTextStyleAndroid = 'text-blue-800 font-bold text-2xl p-2';
-  const blockTextStyle =
-    Platform.OS === 'ios' ? blockTextStyleTVOS : blockTextStyleAndroid;
+  const blockTextStyle = 'text-blue-800 font-bold text-4xl p-4 android:text-2xl android:p-2';
 
   const renderRow = ({ item }: { item: number }) => {
     return (
