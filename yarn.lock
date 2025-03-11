@@ -924,10 +924,10 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
-"@bottom-tabs/react-navigation@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@bottom-tabs/react-navigation/-/react-navigation-0.8.1.tgz#32739c993545bbd12aa2727444c3319514ef8ea0"
-  integrity sha512-xjfro5DFxJSpfb1kzdaGL8rXz51rBLPB7Ku39bvEmpfr5HwIIFHcHBU/2TPoN3jmkIS1lhI5Ml8hoczYVdWqzg==
+"@bottom-tabs/react-navigation@^0.8.9":
+  version "0.8.9"
+  resolved "https://registry.yarnpkg.com/@bottom-tabs/react-navigation/-/react-navigation-0.8.9.tgz#b7b11cc72e9c8df8ea1b290fedf11a84fe10fd24"
+  integrity sha512-9TzkY7EuID7lNZRUUfXoiqwokMQYSr0it/Z/rQ/zUAlj3O4bc/qYeMBFT+1SQiv6jAtlS1ZenRMLPaKVC7Wb8Q==
   dependencies:
     color "^4.2.3"
 
@@ -6534,11 +6534,12 @@ react-is@^18.0.0, react-is@^18.2.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
-react-native-bottom-tabs@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/react-native-bottom-tabs/-/react-native-bottom-tabs-0.8.1.tgz#273546cfc60f6af71823b2482755f4b27c641e0d"
-  integrity sha512-jqG7gfGDeCg/yJuUSMo+iEgn33aU46wAgxJVl7oDFs8JNJOD/ATzsd6lQ/Pr0txljIUITOERb4ZtInMe4/UcmA==
+react-native-bottom-tabs@^0.8.9:
+  version "0.8.9"
+  resolved "https://registry.yarnpkg.com/react-native-bottom-tabs/-/react-native-bottom-tabs-0.8.9.tgz#8edf893eb5d158cc09a9eae6d4f596dfbc74bd8c"
+  integrity sha512-We8p0haa4ekzJGJu9CYm4dPPX3N06WLklGpucJKpUmlGumIPNY+twptEjnB3yoI6CNLnEuh9V74TcdBiAeuUzQ==
   dependencies:
+    react-freeze "^1.0.0"
     sf-symbols-typescript "^2.0.0"
     use-latest-callback "^0.2.1"
 
