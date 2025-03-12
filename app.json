@@ -3,6 +3,7 @@
     "name": "NativeWindTV",
     "slug": "NativeWindTV",
     "scheme": "nativewindtv",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png"
     },
