@@ -7,15 +7,19 @@ import {
   TouchableHighlight,
 } from 'react-native';
 
-import {
-  backgroundStyle,
-  buttonStyle,
-  buttonTextStyle,
-  blockTextStyle,
-  ribbonStyle,
-  ribbonTextStyle,
-} from '@/constants/TVNativeWindStyles';
 import '../../global.css';
+
+const backgroundStyle = 'bg-neutral-300 dark:bg-slate-900 flex-1 w-screen';
+
+const buttonStyle = `relative m-[0.5vw] bg-blue-500 w-[80vw] h-[10vh] text-white p-[1vw] font-bold overflow-hidden transition duration-500 hover:bg-blue-300 focus:bg-blue-300 active:bg-green-600`;
+
+const buttonTextStyle = 'text-white text-[2.5vw]';
+
+const ribbonStyle = 'ribbonstyle';
+
+const ribbonTextStyle = 'text-white text-[1vw]';
+
+const blockTextStyle = 'text-blue-800 font-bold text-[2.5vw] p-[1.5vw]';
 
 const data: number[] = [...Array(10).keys()];
 
