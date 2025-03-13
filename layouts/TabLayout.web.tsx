@@ -1,32 +1,39 @@
-import { Tabs } from 'expo-router';
+import { Href, Tabs, useRouter } from 'expo-router';
 import React from 'react';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
-import { useTextStyles } from '@/hooks/useTextStyles';
-import { useScale } from '@/hooks/useScale';
+import { Pressable, Text } from 'react-native';
+
+const pressableStyle = `flex-3 align-center items-center p-[1vw] h-[10vh]`;
+const labelStyle = ` text-[2.5vw]`;
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-  const textStyles = useTextStyles();
-  const { scale } = useScale();
+  const router = useRouter();
+
+  const TabLayoutButton = ({
+    label,
+    route,
+  }: {
+    label: string;
+    route: Href;
+  }) => {
+    return (
+      <Pressable
+        className={pressableStyle}
+        onPress={() => {
+          router.navigate(route);
+        }}
+      >
+        <Text className={labelStyle}>{label}</Text>
+      </Pressable>
+    );
+  };
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        tabBarActiveBackgroundColor: Colors[colorScheme ?? 'light'].background,
-        tabBarStyle: {
-          width: '100%',
-          // maxWidth: Platform.OS === 'android' ? 200 * scale : 150 * scale,
-        },
         tabBarPosition: 'top',
-        tabBarIconStyle: {
-          height: textStyles.title.lineHeight,
-          width: 0,
-        },
-        tabBarItemStyle: {
-          width: 150 * scale,
-          marginLeft: 0,
+        tabBarIcon: () => null,
+        tabBarStyle: {
+          height: '10%',
         },
         headerShown: false,
       }}
@@ -35,24 +42,25 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarLabelStyle: textStyles.default,
-          tabBarIcon: () => null,
+          tabBarButton: () => <TabLayoutButton label="Home" route="/(tabs)" />,
         }}
       />
       <Tabs.Screen
         name="two"
         options={{
           title: 'Two',
-          tabBarLabelStyle: textStyles.default,
-          tabBarIcon: () => null,
+          tabBarButton: () => (
+            <TabLayoutButton label="Two" route="/(tabs)/two" />
+          ),
         }}
       />
       <Tabs.Screen
         name="tvdemo"
         options={{
           title: 'TV styling demo',
-          tabBarLabelStyle: textStyles.default,
-          tabBarIcon: () => null,
+          tabBarButton: () => (
+            <TabLayoutButton label="TV styling demo" route="/(tabs)/tvdemo" />
+          ),
         }}
       />
     </Tabs>
