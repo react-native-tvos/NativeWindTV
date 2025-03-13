@@ -2,14 +2,21 @@ import { vars } from 'nativewind';
 import { Pressable, Text, View } from 'react-native';
 
 import '../../global.css';
+import { Colors } from '@/constants/Colors';
 
 const theme = vars({
-  '--theme-fg': 'green',
+  '--theme-fg': Colors['light'].tint,
+  '--theme-bg': Colors['light'].background,
+  '--theme-fg-dark': Colors['dark'].tint,
+  '--theme-bg-dark': Colors['dark'].background,
 });
 
 const App = () => {
   return (
-    <View className="flex-1 justify-center items-center gap-10" style={theme}>
+    <View
+      className="flex-1 justify-center items-center gap-10 bg-[--theme-bg] dark:bg-[--theme-bg-dark]"
+      style={theme}
+    >
       <Text className="text-5xl text-[--theme-fg]">Variables!!!</Text>
       <Pressable
         onPress={() => {}}
