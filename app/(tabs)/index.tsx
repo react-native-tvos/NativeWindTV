@@ -1,25 +1,23 @@
 import { vars } from 'nativewind';
 import { Pressable, Text, View } from 'react-native';
 
-import '../../global.css';
-import { Colors } from '@/constants/Colors';
+import { nativewindColorTheme } from '@/constants/Colors';
 import { useRouter } from 'expo-router';
 
-const theme = vars({
-  '--theme-fg': Colors['light'].tint,
-  '--theme-bg': Colors['light'].background,
-  '--theme-fg-dark': Colors['dark'].tint,
-  '--theme-bg-dark': Colors['dark'].background,
-});
+import '../../global.css';
+
+const theme = vars(nativewindColorTheme);
 
 const App = () => {
   const router = useRouter();
   return (
     <View
-      className="flex-1 justify-center items-center gap-10 bg-[--theme-bg] dark:bg-[--theme-bg-dark]"
+      className="flex-1 justify-center items-center gap-10 bg-[--background-light] dark:bg-[--background-dark]"
       style={theme}
     >
-      <Text className="text-[5vh] text-green-600">Variables!!!</Text>
+      <Text className="text-[5vh] text-[--icon-light] dark:text-[--icon-dark]">
+        Variables!!!
+      </Text>
       <Pressable
         onPress={() => {}}
         tvParallaxProperties={{ enabled: false }}
@@ -27,7 +25,7 @@ const App = () => {
       >
         {({ focused, pressed, hovered }) => {
           return (
-            <Text className="text-[5vh] text-[--theme-fg] focus:text-blue-600 hover:text-blue-600">{`Transitions button${
+            <Text className="text-[5vh] text-[--link-light] dark:text-[--link-dark] focus:text-blue-600 hover:text-blue-600">{`Transitions button${
               pressed
                 ? ' pressed'
                 : hovered
@@ -41,9 +39,11 @@ const App = () => {
       </Pressable>
       <Text className="text-[5vh] animate-bounce">Animations!!!</Text>
       <Pressable onPress={() => router.navigate('/modal')} className="">
-        <Text className="text-[3vh] text-[--theme-fg] hover:text-bold focus:text-bold active:text-[--theme-bg]">
-          About
-        </Text>
+        {() => (
+          <Text className="text-[3vh] text-[--link-light] dark:text-[--link-dark] hover:font-bold focus:font-bold active:text-blue-500">
+            About
+          </Text>
+        )}
       </Pressable>
     </View>
   );

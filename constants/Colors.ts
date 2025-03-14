@@ -26,3 +26,16 @@ export const Colors = {
     link: '#0a7ea4',
   },
 };
+
+export const nativewindColorTheme = {
+  '--text-light': Colors['light'].text,
+  '--background-light': Colors['light'].background,
+  '--tint-light': Colors['light'].tint,
+  '--link-light': Colors['light'].link,
+  '--icon-light': Colors['light'].icon,
+  '--text-dark': Colors['dark'].text,
+  '--background-dark': Colors['dark'].background,
+  '--tint-dark': Colors['dark'].tint,
+  '--link-dark': Colors['dark'].link,
+  '--icon-dark': Colors['dark'].icon,
+};

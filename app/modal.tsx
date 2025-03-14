@@ -43,8 +43,10 @@ export default function Modal() {
       </ExternalLink>
       {/* Use `../` as a simple way to navigate to the root. This is not analogous to "goBack". */}
       <Link href="/" asChild>
-        <Pressable className="hover:bg-blue-400">
-          <Text className="text-[3vh] text-green-500">Dismiss</Text>
+        <Pressable>
+          {() => (
+            <Text className="text-[3vh] hover:text-blue-500">Dismiss</Text>
+          )}
         </Pressable>
       </Link>
     </View>
