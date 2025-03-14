@@ -1,5 +1,6 @@
 import { version as rnVersion } from 'react-native/package.json';
 import { version as routerVersion } from 'expo-router/package.json';
+import { version as nativewindVersion } from 'nativewind/package.json';
 import { Platform } from 'react-native';
 
 const hermesVersion = (global as any)?.HermesInternal?.getRuntimeProperties();
@@ -15,6 +16,7 @@ export const reactNativeInfo = {
   rnVersion,
   routerVersion,
   hermesVersion,
+  nativewindVersion,
   uiManager,
   jsEngine,
 };
