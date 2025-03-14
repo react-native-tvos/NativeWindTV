@@ -5,7 +5,6 @@ import { createNativeBottomTabNavigator } from '@bottom-tabs/react-navigation';
 import { Platform } from 'react-native';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { useTextStyles } from '@/hooks/useTextStyles';
 
 export const Tabs = withLayoutContext(
   createNativeBottomTabNavigator().Navigator,
@@ -14,8 +13,6 @@ export const Tabs = withLayoutContext(
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   const colors = Colors[colorScheme ?? 'light'];
-
-  const textStyles = useTextStyles();
 
   return (
     <Tabs
