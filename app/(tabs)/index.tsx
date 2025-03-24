@@ -25,7 +25,7 @@ const App = () => {
       >
         {({ focused, pressed, hovered }) => {
           return (
-            <Text className="text-[5vh] text-[--link-light] dark:text-[--link-dark] focus:text-blue-600 hover:text-blue-600">{`Transitions button${
+            <Text className="text-[5vh] text-[--link-light] dark:text-[--link-dark] transition duration-500 active:text-green-500 active:scale-110  focus:text-blue-600 hover:text-blue-600">{`Transitions button${
               pressed
                 ? ' pressed'
                 : hovered
