@@ -1,31 +1,31 @@
-import { vars } from 'nativewind';
+import { useColorScheme } from 'nativewind';
 import { Pressable, Text, View } from 'react-native';
 
-import { nativewindColorTheme } from '@/constants/Colors';
 import { useRouter } from 'expo-router';
 
 import '../../global.css';
 
-const theme = vars(nativewindColorTheme);
-
 const App = () => {
   const router = useRouter();
+  const { colorScheme, setColorScheme } = useColorScheme();
   return (
-    <View
-      className="flex-1 justify-center items-center gap-10 bg-[--background-light] dark:bg-[--background-dark]"
-      style={theme}
-    >
-      <Text className="text-[5vh] text-[--icon-light] dark:text-[--icon-dark]">
+    <View className="flex-1 justify-center items-center gap-10 bg-white dark:bg-black">
+      <Text className="text-[5vh] text-black dark:text-white">
         Variables!!!
       </Text>
+      <Text className="text-[5vh] text-green-800 dark:text-green-300">
+        {`Color scheme: ${colorScheme}`}
+      </Text>
       <Pressable
-        onPress={() => {}}
+        onPress={() =>
+          setColorScheme(colorScheme === 'dark' ? 'light' : 'dark')
+        }
         tvParallaxProperties={{ enabled: false }}
         className="transition duration-500 focus:scale-125 active:scale-150"
       >
         {({ focused, pressed, hovered }) => {
           return (
-            <Text className="text-[5vh] text-[--link-light] dark:text-[--link-dark] transition duration-500 active:text-green-500 active:scale-110  focus:text-blue-600 hover:text-blue-600">{`Transitions button${
+            <Text className="text-[5vh] text-special transition duration-500 active:text-green-500 active:scale-110  focus:text-blue-600 hover:text-blue-600">{`Transitions button${
               pressed
                 ? ' pressed'
                 : hovered
@@ -37,10 +37,12 @@ const App = () => {
           );
         }}
       </Pressable>
-      <Text className="text-[5vh] animate-bounce">Animations!!!</Text>
+      <Text className="text-[5vh] dark:text-white animate-bounce">
+        Animations!!!
+      </Text>
       <Pressable onPress={() => router.navigate('/modal')} className="">
         {() => (
-          <Text className="text-[3vh] text-[--link-light] dark:text-[--link-dark] hover:font-bold focus:font-bold active:text-blue-500">
+          <Text className="text-[3vh] text-red-800 dark:text-red-300 hover:font-bold focus:font-bold active:text-blue-500">
             About
           </Text>
         )}

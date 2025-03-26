@@ -28,6 +28,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        special: {
+          DEFAULT: '#222222',
+          DARK: '#eeeeee',
+        },
         light: Colors.light,
         dark: Colors.dark,
       },

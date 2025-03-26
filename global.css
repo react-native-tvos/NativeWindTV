@@ -10,3 +10,32 @@
     align-items: center;
     transform: rotate(45deg) translate(18vw, -40vh);
 }
+
+@layer base {
+  @media (prefers-color-scheme: light) {
+      :root {
+        background: 0 0% 100%;
+        color: 0 0% 0%;
+      }
+      :color {
+        --background-default: #fff;
+        --text-default: #11181C;
+        --tint-default: #0a7ea4;
+        --icon-default: #687076;
+        --link-default: #0a7ea4;
+      };
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        background: 0 0% 0%;
+        color: 0 0% 100%;
+      }
+      :color {
+        --background-default: #151718;
+        --text-default: #ECEDEE;
+        --tint-default: #a0a0a0;
+        --icon-default: #9BA1A6;
+        --link-default: #0a7ea4;
+      }
+    }
+   }

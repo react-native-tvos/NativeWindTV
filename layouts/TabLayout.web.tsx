@@ -9,10 +9,6 @@ import React from 'react';
 import { Pressable, Text } from 'react-native';
 
 import '../global.css';
-import { vars } from 'nativewind';
-import { nativewindColorTheme } from '@/constants/Colors';
-
-const theme = vars(nativewindColorTheme);
 
 function CustomTabButton(props: TabTriggerSlotProps) {
   return (
@@ -34,10 +30,7 @@ CustomTabButton.displayName = 'CustomTabButton';
 export default function TabLayout() {
   return (
     <Tabs>
-      <TabList
-        style={theme}
-        className="flex flex-row absolute top-0 width-full h-[10vh] bg-[--background-light] dark:bg-[--background-dark]"
-      >
+      <TabList className="flex flex-row absolute top-0 width-full h-[10vh]">
         <TabTrigger name="index" href="/" asChild>
           <CustomTabButton>Home</CustomTabButton>
         </TabTrigger>
