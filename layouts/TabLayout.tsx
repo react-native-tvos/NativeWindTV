@@ -3,22 +3,22 @@ import { withLayoutContext } from 'expo-router';
 import { createNativeBottomTabNavigator } from '@bottom-tabs/react-navigation';
 
 import { Platform } from 'react-native';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { colors } from '@/constants/Theme';
+import { useColorScheme } from 'nativewind';
 
 export const Tabs = withLayoutContext(
   createNativeBottomTabNavigator().Navigator,
 );
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-  const colors = Colors[colorScheme ?? 'light'];
+  const { colorScheme } = useColorScheme();
+  const themedColors = colors[colorScheme ?? 'light'];
 
   return (
     <Tabs
-      tabBarActiveTintColor={colors.tabIconSelected}
-      tabBarInactiveTintColor={colors.tabIconDefault}
-      rippleColor={colors.tint}
+      tabBarActiveTintColor={themedColors.tabIconSelected}
+      tabBarInactiveTintColor={themedColors.tabIconDefault}
+      rippleColor={themedColors.tint}
       labeled={true}
     >
       <Tabs.Screen

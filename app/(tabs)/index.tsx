@@ -9,11 +9,9 @@ const App = () => {
   const router = useRouter();
   const { colorScheme, setColorScheme } = useColorScheme();
   return (
-    <View className="flex-1 justify-center items-center gap-10 bg-white dark:bg-black">
-      <Text className="text-[5vh] text-black dark:text-white">
-        Variables!!!
-      </Text>
-      <Text className="text-[5vh] text-green-800 dark:text-green-300">
+    <View className="flex-1 justify-center items-center gap-10 bg-[--color-background]">
+      <Text className="text-[5vh] text-[--color-text]">Variables!!!</Text>
+      <Text className="text-[5vh] text-[--color-green]">
         {`Color scheme: ${colorScheme}`}
       </Text>
       <Pressable

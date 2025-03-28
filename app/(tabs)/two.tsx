@@ -8,7 +8,7 @@ export default function TabTwoScreen() {
         justifyContent: 'center',
         alignItems: 'center',
       }}
-      className="bg-neutral-300 dark:bg-slate-900 flex-1"
+      className="bg-[--color-special] flex-1"
     >
       <View className="m-20">
         <Text className="text-orange-400 text-5xl dark:text-green-200">
